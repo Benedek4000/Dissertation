@@ -1,8 +1,7 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1.1in]{geometry}
+\usepackage[margin=1.0in]{geometry}
 \usepackage{graphicx}
-\usepackage{multicol}
 \usepackage{amsmath}
 \usepackage[font={small,it}]{caption}
 
@@ -204,7 +203,7 @@
         \begin{enumerate}
             \item A list of solar activity periods have been prepared, containing the dates the periods begin and end, and the type of period it is (minimum, intermediate or maximum solar activity).
             \item For every file (one day of measurements), the following process has been followed: the invalid measurements from the IMF strength (and alike from the solar wind speed) data for x, y and z coordinates have been removed and the daily minima and maxima have been determined. These data points have been separated based on coordinate, solar activity the given day belongs to and whether the list contains the minima or the maxima for the given solar activity and coordinate.\label{stepcontinue}
-            \item To each of the data points in a list, the ratio of data points lower (higher for minima) has been assigned. For each property (coordinate, solar activity level and minima/maxima), a line of best fit was fitted, using Generalized Extreme Value Distribution and the parameters of the distribution have been determined. Graphs of cumulative distributions functions and probability density functions (based on the parameters determined by the cumulative density functions) have been plotted.
+            \item To each of the data points in a list, the ratio of data points lower (higher for minima) has been assigned. For each property (coordinate, solar activity level and minima/maxima), a line of best fit was fitted, using Generalized Extreme Value Distribution and the least square method, then the parameters of the distribution have been determined. Graphs of cumulative distributions functions and probability density functions (based on the parameters determined by the cumulative density functions) have been plotted.
             \item Using the method described in Section \ref{sec:returnlevel}, the errors in the parameters have been determined.
             \item For each property, a graph of return level against return period has been plotted. The return levels have been plotted for return period values between 0.1 year and 1000 years. Then, using the method described in Section \ref{sec:returnlevel}, the errors in the return levels have been determined.
         \end{enumerate}
@@ -225,6 +224,63 @@
             \item pressure intermediate X maxima (show that intermediate activity can cause more extreme effects than maximum activity)
             \item pressure maximum X maxima
         \end{itemize}
+        \begin{figure}[t!]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/MFIintXmin.png}
+                \caption{}
+                \label{fig:MFIintXmin}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/MFImaxXmin.png}
+                \caption{}
+                \label{fig:MFImaxXmin}
+            \end{minipage}
+        \end{figure}\begin{figure}[t!]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/MFImaxZmin.png}
+                \caption{}
+                \label{fig:MFImaxZmin}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/SWEminXmin.png}
+                \caption{}
+                \label{fig:SWEminXmin}
+            \end{minipage}
+        \end{figure}\begin{figure}[t!]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/SWEintXmin.png}
+                \caption{}
+                \label{fig:SWEintXmin}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/SWEmaxXmin.png}
+                \caption{}
+                \label{fig:SWEmaxXmin}
+            \end{minipage}
+        \end{figure}\begin{figure}[t!]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/Pintmax.png}
+                \caption{}
+                \label{fig:Pintmax}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/Pmaxmax.png}
+                \caption{}
+                \label{fig:Pmaxmax}
+            \end{minipage}
+        \end{figure}
     \subsection{Return Levels of Daily Minima and Maxima}\label{sec:returnperiod}
         INCLUDE IMPORTANT GRAPHS AND GENERAL EQUATION FOR CURVES, MAYBE EXACT EQUATIONS FOR EACH GRAPH:
         \begin{itemize}
@@ -237,6 +293,63 @@
             \item pressure intermediate X maxima (show that intermediate activity can cause more extreme effects than maximum activity)
             \item pressure maximum X maxima  (maybe just include intermediate or maximum)
         \end{itemize}
+        \begin{figure}[t!]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/MFIintXminReturn.png}
+                \caption{}
+                \label{fig:MFIintXminReturn}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/MFImaxXminReturn.png}
+                \caption{}
+                \label{fig:MFImaxXminReturn}
+            \end{minipage}
+        \end{figure}\begin{figure}[t!]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/MFImaxZminReturn.png}
+                \caption{}
+                \label{fig:MFImaxZminReturn}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/SWEminXminReturn.png}
+                \caption{}
+                \label{fig:SWEminXminReturn}
+            \end{minipage}
+        \end{figure}\begin{figure}[t!]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/SWEintXminReturn.png}
+                \caption{}
+                \label{fig:SWEintXminReturn}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/SWEmaxXminReturn.png}
+                \caption{}
+                \label{fig:SWEmaxXminReturn}
+            \end{minipage}
+        \end{figure}\begin{figure}[t!]
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/PintmaxReturn.png}
+                \caption{}
+                \label{fig:PintmaxReturn}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.48\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{fig_method/PmaxmaxReturn.png}
+                \caption{}
+                \label{fig:PmaxmaxReturn}
+            \end{minipage}
+        \end{figure}
 \section{Discussion}\label{sec:discussion}
     \subsection{Reaction Time for Measurements at L1 Lagrange Point}
         CALCULATIONS FOR REACTION TIME BETWEEN MEASURING SOLAR WIND AT L1 POINT AND SAID SOLAR WIND HITTING THE SATELLITES AND EARTH
