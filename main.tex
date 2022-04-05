@@ -213,17 +213,6 @@
         \end{equation}
         where $n$ is the proton density (the electron density is negligible, as electrons have negligible mass and therefore do not contribute to the solar wind ram pressure), $m_p$ is the mass of a proton and $V$ is the solar wind bulk velocity. Then, the daily minima and maxima have been determined and the same process from Step \ref{stepcontinue}. has been followed. It is important to note, that for solar wind ram pressure, the data has not been separated based on coordinates, as solar wind ram pressure in the y and z-directions is negligible.
     \subsection{Distributions of Daily Minima and Maxima}\label{sec:dailydist}
-        INCLUDE IMPORTANT GRAPHS AND GENERAL EQUATION FOR CURVES:
-        \begin{itemize}
-            \item MFI intermediate X minima (show that intermediate activity can cause more extreme effects than maximum activity)
-            \item MFI maximum X minima
-            \item MFI maximum Z minima (can compare data to Carrington event)
-            \item SWE minimum X minima (show that intermediate activity can cause more extreme effects than intermediate and maximum activity)
-            \item SWE intermediate X minima (show that intermediate activity can cause more extreme effects than maximum activity)
-            \item SWE maximum X minima
-            \item pressure intermediate X maxima (show that intermediate activity can cause more extreme effects than maximum activity)
-            \item pressure maximum X maxima
-        \end{itemize}
         \begin{figure}[t!]
             \begin{minipage}{0.48\textwidth}
                 \centering
@@ -266,7 +255,34 @@
                 \caption{}
                 \label{fig:SWEmaxXmin}
             \end{minipage}
-        \end{figure}\begin{figure}[t!]
+        \end{figure}
+        After following the procedure described in Section \ref{sec:dataproc}, two graphs for each combination of the three solar activity levels (minimum, intermediate and maximum), coordinate (x, y and z) and daily minima or maxima has been produced: a graph of the cumulative distribution function and a graph of the probability density function. This section aims to describe the and point out the most important properties of these graphs, that are relevant to the topic of report. The effects on the return levels/return periods of the differences in the parameters describing comparable graphs is hard to predict from these graphs, and therefore these comparisons will mainly be discussed in Section \ref{sec:returnperiod}. It is important to note, that for graphs describing the strength of the Interplanetary Magnetic field or the solar wind speed, graphs of daily minima have been selected, as the more negative values represent stronger magnetic field strength or faster solar wind towards the Earth. For graphs describing the solar wind ram pressure, graphs of daily maxima have been selected, as the more positive values represent larger ram pressure.\\ \\
+        The graphs on Figures \ref{fig:MFIintXmin} and \ref{fig:MFImaxXmin} describe the distributions of the daily minima of the IMF in the x-direction, during intermediate and maximum solar activity, respectively. The parameters acquired for these graphs (and the fact that they are somewhat similar) suggest that the IMF acts in similar ways during intermediate and maximum solar activity. The small differences between these parameters will mean some difference between the expected return level for a given return period (more in Section \ref{sec:returnperiod}). Studying these distributions is important, as the strength of the IMF in the x-direction often gives good indications of the strength of the solar wind heading towards Earth.
+        The equation describing the cumulative distribution function on Figure \ref{fig:MFIintXmin} is the following:
+        \begin{equation}
+            G(z) = exp\Bigg [-\Bigg [1+0.095 \Bigg (\frac{-z-4.930}{2.095}\Bigg )\Bigg ]^{-1/0.095}\Bigg ]
+        \end{equation}\\
+        while the equation describing the cumulative distribution function on Figure \ref{fig:MFImaxXmin} is the following:
+        \begin{equation}
+            G(z) = exp\Bigg [-\Bigg [1+0.066 \Bigg (\frac{-z-5.366}{2.358}\Bigg )\Bigg ]^{-1/0.066}\Bigg ]
+        \end{equation}\\ \\
+        The graphs on Figure \ref{fig:MFImaxZmin} describe the distribution of the daily minima of the IMF in the z-direction, during maximum solar activity. For the purposes of this study, daily maxima could have been selected as well, as the distribution of the magnetic field strength in the z-direction is fairly symmetric around $B_z=0nT$ (see Figure \ref{fig:hist_imf}). The graph of daily minima has been selected, as this will give an easier way to predict the return period of a 'Carrington Event'-like geomagnetic storm (more in Section \ref{sec:carrington}). The equation describing the cumulative distribution function on Figure \ref{fig:MFImaxZmin} is the following:
+        \begin{equation}
+            G(z) = exp\Bigg [-\Bigg [1+0.192 \Bigg (\frac{-z-6.092}{2.593}\Bigg )\Bigg ]^{-1/0.192}\Bigg ]
+        \end{equation}\\ \\
+        The graphs on Figures \ref{fig:SWEminXmin}, \ref{fig:SWEintXmin} and \ref{fig:SWEmaxXmin} describe the distributions of the daily minima of the solar wind speed in the x-direction, during minimum, intermediate and maximum solar activity, respectively. While the parameters on Figures \ref{fig:SWEintXmin} and \ref{fig:SWEmaxXmin} are similar mostly similar (except for the shape parameter, $\xi$), the parameters on Figure \ref{fig:SWEminXmin} are more different (smaller location parameter, $\mu$ and smaller scale parameter, $\sigma$), suggesting that the behaviour of the solar wind speed is similar during intermediate and maximum solar activity, while it's different during minimum solar activity. The smaller location parameter would suggest more extreme behaviour during minimum solar activity, while the smaller shape parameter would suggest less extreme behaviour in this period. The overall effects of these parameters will be shown in Section \ref{sec:returnperiod}. The equation describing the cumulative distribution function on Figure \ref{fig:SWEminXmin} is the following:
+        \begin{equation}
+            G(z) = exp\Bigg [-\Bigg [1+0.159 \Bigg (\frac{-z-389.221}{78.528}\Bigg )\Bigg ]^{-1/0.159}\Bigg ]
+        \end{equation}\\
+        while the equation describing the cumulative distribution function on Figure \ref{fig:SWEintXmin} is:
+        \begin{equation}
+            G(z) = exp\Bigg [-\Bigg [1+0.124 \Bigg (\frac{-z-423.375}{87.408}\Bigg )\Bigg ]^{-1/0.124}\Bigg ]
+        \end{equation}\\
+        and the equation describing the cumulative distribution function on Figure \ref{fig:SWEmaxXmin} is:
+        \begin{equation}\\
+            G(z) = exp\Bigg [-\Bigg [1+0.078 \Bigg (\frac{-z-423.107}{90.772}\Bigg )\Bigg ]^{-1/0.078}\Bigg ]
+        \end{equation}\\
+        \begin{figure}[t!]
             \begin{minipage}{0.48\textwidth}
                 \centering
                 \includegraphics[width=\textwidth]{fig_method/Pintmax.png}
@@ -280,7 +296,16 @@
                 \caption{}
                 \label{fig:Pmaxmax}
             \end{minipage}
-        \end{figure}
+        \end{figure}\\
+        The graphs on Figures \ref{fig:Pintmax} and \ref{fig:Pmaxmax} describe the distributions of the daily maxima of the solar wind ram pressure, during intermediate and maximum solar activity, respectively. There is a slight difference between the two graphs in all three parameters, therefore it is incredibly difficult to predict how their return levels for a given return period will relate, before seeing the return level against return period graphs (in Section \ref{sec:returnperiod}). The equation describing the cumulative distribution function on Figure \ref{fig:Pintmax} is the following:
+        \begin{equation}
+            G(z) = exp\Bigg [-\Bigg [1+0.430 \Bigg (\frac{z-20.402}{11.560}\Bigg )\Bigg ]^{-1/0.430}\Bigg ]
+        \end{equation}\\
+        while the equation describing the cumulative distribution function on Figure \ref{fig:Pmaxmax} is the following:
+        \begin{equation}
+            G(z) = exp\Bigg [-\Bigg [1+0.399 \Bigg (\frac{z-19.655}{12.840}\Bigg )\Bigg ]^{-1/0.399}\Bigg ]
+        \end{equation}
+        ADD CAPTIONS TO DISTRIBUTION GRAPHS
     \subsection{Return Levels of Daily Minima and Maxima}\label{sec:returnperiod}
         INCLUDE IMPORTANT GRAPHS AND GENERAL EQUATION FOR CURVES, MAYBE EXACT EQUATIONS FOR EACH GRAPH:
         \begin{itemize}
