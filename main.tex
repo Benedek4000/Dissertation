@@ -421,7 +421,17 @@
         \end{equation}\\ \\
 \section{Discussion}\label{sec:discussion}
     \subsection{Reaction Time for Measurements at L1 Lagrange Point}
-        CALCULATIONS FOR REACTION TIME BETWEEN MEASURING SOLAR WIND AT L1 POINT AND SAID SOLAR WIND HITTING THE SATELLITES AND EARTH
+        When preparing to take action in case the satellite at the L1 point detects high speed solar wind or a strong magnetic field, it is important to know the response time available from the moment of detection. To estimate the response time available, the time taken for the solar wind to travel from the L1 point to the satellites or the surface of the Earth needs to be calculated. Since most of the satellites orbit the Earth at a height of a few thousand kilometres, the time it takes for the high speed solar wind to travel from the L1 point to the Earth and the time it takes for it to travel from the L1 point to most satellites orbiting Earth will be approximately the same.\\ \\
+        The distance between the Earth and the L1 point is approximately $1.5\ million\ km = 1.5*10^9m$. From Table \ref{tab:slowfast}, the minimum speed of fast solar wind is around $400km/s$, while in extreme cases, it can be a lot faster, than that. A prime example for a geomagnetic disturbance causing damage is the Halloween Storms in 2003. Using the data set described in Section \ref{sec:data}, the maximum speed of the solar wind during the 2003 Halloween Storms was approximately $870km/s = 8.7*10^5m/s$ in the negative x-direction, towards the Earth.\\ \\
+        Therefore, in case of the 2003 Halloween Storms, it took the solar wind:
+        \begin{equation}
+            t=\frac{s}{v}=\frac{1.5*10^9}{8.7*10^5}=1700s=29\ minutes
+        \end{equation}
+        to reach Earth. As seen on Figure \ref{fig:hist_sw}, the solar wind speed can (very rarely) increase to approximately $1200km/s$, which would result in a reaction time of:
+        \begin{equation}
+            t=\frac{s}{v}=\frac{1.5*10^9}{1.2*10^6}=1250s=21\ minutes
+        \end{equation}
+        necessary, assuming constant solar wind speed.
     \subsection{Estimating the Return Period of a 'Carrington Event'-like Geomagnetic Storm}\label{sec:carrington}
         DISCUSS APPROXIMATIONS FOR THE CARRINGTON EVENT. CALCULATE RETURN PERIODS BASED ON BZ AND SOLAR WIND VELOCITY (OR BASED ON ANY OTHER AVAILABLE APPROXIMATIONS, MAYBE MULTIPLE APPROXIMATIONS OF THE SAME QUANTITY). DISCUSS ERRORS IN THE APPROXIMATIONS AND HOW THIS AFFECTS THE RETURN PERIOD.
     \subsection{Estimating the Return Period of a 'Halloween'-like Geomagnetic Storm}\label{sec:halloween}
