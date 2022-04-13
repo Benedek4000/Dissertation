@@ -1,6 +1,6 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1.0in]{geometry}
+\usepackage[margin=1.1in]{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage[font={small,it}]{caption}
@@ -425,22 +425,81 @@
         The distance between the Earth and the L1 point is approximately $1.5\ million\ km = 1.5*10^9m$. From Table \ref{tab:slowfast}, the minimum speed of fast solar wind is around $400km/s$, while in extreme cases, it can be a lot faster, than that. A prime example for a geomagnetic disturbance causing damage is the Halloween Storms in 2003. Using the data set described in Section \ref{sec:data}, the maximum speed of the solar wind during the 2003 Halloween Storms was approximately $870km/s = 8.7*10^5m/s$ in the negative x-direction, towards the Earth.\\ \\
         Therefore, in case of the 2003 Halloween Storms, it took the solar wind:
         \begin{equation}
-            t=\frac{s}{v}=\frac{1.5*10^9}{8.7*10^5}=1700s=29\ minutes
+            t=\frac{s}{v}=\frac{1.5*10^9}{8.7*10^5}\approx 1700s\approx 29\ minutes
         \end{equation}
-        to reach Earth. As seen on Figure \ref{fig:hist_sw}, the solar wind speed can (very rarely) increase to approximately $1200km/s$, which would result in a reaction time of:
+        to reach Earth. As seen on Figure \ref{fig:hist_sw}, the solar wind speed can (very rarely) increase to approximately $1200km/s$. At this speed, the reaction time would decrease to:
         \begin{equation}
-            t=\frac{s}{v}=\frac{1.5*10^9}{1.2*10^6}=1250s=21\ minutes
+            t=\frac{s}{v}=\frac{1.5*10^9}{1.2*10^6}\approx 1250s\approx 21\ minutes
         \end{equation}
-        necessary, assuming constant solar wind speed.
+        assuming constant solar wind speed. This means, that governments and affected companies would have approximately 20-30 minutes to react to approaching geomagnetic storms.
     \subsection{Estimating the Return Period of a 'Carrington Event'-like Geomagnetic Storm}\label{sec:carrington}
-        DISCUSS APPROXIMATIONS FOR THE CARRINGTON EVENT. CALCULATE RETURN PERIODS BASED ON BZ AND SOLAR WIND VELOCITY (OR BASED ON ANY OTHER AVAILABLE APPROXIMATIONS, MAYBE MULTIPLE APPROXIMATIONS OF THE SAME QUANTITY). DISCUSS ERRORS IN THE APPROXIMATIONS AND HOW THIS AFFECTS THE RETURN PERIOD.
+        As return levels will have different return periods depending on the solar activity level, the following formula has been used to calculate the average of these return periods and determine the final return period for a given return level:
+        \begin{equation}
+            \frac{3}{R}=\frac{1}{R_{minimum}}+\frac{1}{R_{intermediate}}+\frac{1}{R_{maximum}}
+        \end{equation}
+        where R is the averaged return period, $R_{minimum}$ is the return period during minimum solar activity, $R_{intermediate}$ is the return period during intermediate solar activity and $R_{maximum}$ is the return period during maximum solar activity.\\ \\
+        The Carrington Event is 1859 is estimated to be the largest geomagnetic storm ever recorded. At the time, direct measurements could not be made, due to lack of technology, therefore, several estimations are available about different properties of this event, based on measurements made of Earth. One article cites\cite{2013cliver} estimates that the solar wind speed reached $V_x=-1850 km/s$ and the southwards IMF strength reached $B_z\approx -65nT$. These estimations are also shown on Figure \ref{fig:returncarrington}.\\
+        \begin{figure}[t!]
+            \centering
+            \includegraphics[width=0.7\textwidth]{fig_discussion/carrington.png}
+            \caption{Approximations for the solar wind speed (top), the southward IMF strength (middle top) and the proton density (middle bottom) during the Carrington Event. Includes measurements and approximations of the disturbance storm index (Dst, bottom). As shown on the top graph, the maximum solar wind speed is approximated to be $\approx -1850 km/s$ and as shown on the middle top graph, the southward IMF strength is approximated to be $\approx 65nT$. Source: \cite{2006xinlin}}
+            \label{fig:returncarrington}
+        \end{figure}\\
+        Another article\cite{2021blake} used $V_X\approx -2000km/s$ and $B_z=-118nT$ to simulate the Carrington Event. The differences between the estimations in these articles show, that it is nearly impossible to accurately estimate the maximum solar wind speed and the maximum southward IMF strength.\\
+        Based on these 4 return levels (2 southward IMF strengths and 2 solar wind speeds), the following 4 return periods for an event comparable to the Carrington Event have been calculated:
+        \begin{equation}
+            \begin{split}
+                B_z\cite{2013cliver}\approx -65nT\rightarrow R\approx 21\ years\\
+                B_z\cite{2021blake}=-118nT\rightarrow R=317\ years\\ \\
+                V_x\cite{2013cliver}=-1850km/s\rightarrow R=24\ years\\
+                V_x\cite{2021blake}\approx -2000km/s\rightarrow R\approx 40\ years
+            \end{split}
+        \end{equation}
+        As these results show, approximation and simulations to determine the maximum solar wind speed and the maximum southward IMF strength during the Carrington Event are far from perfect. The biggest outlier of these results is the approximation of the southward IMF strength of $B_z=-118nT$, which gives a return period of $R=317\ years$, while the other approximations all give a return period below $R=50\ years$. These results would suggest, that the true return period of an event similar to the Carrington Event would be between $R=20\ years$ and $R=320\ years$. This range of return periods does not hold any value or progress, since 20 years appears to be too small, as nothing comparable to the Carrington Event has happened since the Carrington Event itself, on the other hand, 320 years is too large, since adequate notes about geomagnetic storms before the Carrington Event do not exist and not enough time has elapsed since the Carrington Event to prove or disprove the validity of it. Therefore, the average of these values will be considered the return period of an event similar to the Carrington Event, but it is important to note, that the uncertainty of this value will be extremely high. After taking the average of the return periods mentioned above, the return period of an event similar to the Carrington Event was determined to be $R\approx 103\pm 72\ years$.
     \subsection{Estimating the Return Period of a 'Halloween'-like Geomagnetic Storm}\label{sec:halloween}
-        DISCUSS MEASUREMENTS FOR THE HALLOWEEN STORM. CALCULATE RETURN PERIODS BASED ON VARIOUS DATA AVAILABLE (MAGNETIC FIELD, SOLAR WIND VELOCITY, RAM PRESSURE). DISCUSS DIFFERENCES IN THESE RESULTS AND HOW THIS AFFECTS THE RETURN PERIOD.
+        The 2003 Halloween Storms is one of the largest geomagnetic storms with precisely measured properties. Measurements of different maximum values during the Halloween Storms have all been taken from the data set used in this report. The largest (smallest) values from the 2 days the storm was raging have been used (28 October 2003 and 29 October 2003). It is important to note, that measurements of solar wind speed were not available on 29 October 2003, therefore the actual solar wind speed might be more extreme, which would result in a longer return period. It has been determined, that the following extreme values characterise the 2003 Halloween Storms: $B_x=-43.6nT$, $V_x=-804km/s$, $P=54.0nPa$. Based on these values, the following 3 return periods for an event similar to the Halloween Storms have been calculated:
+        \begin{equation}
+            \begin{split}
+                B_x=-43.6nT\rightarrow R=201\ years\\
+                V_x=-804km/s\rightarrow R=0.11\ years\\
+                P=54.0nPa\rightarrow R=0.022\ years
+            \end{split}
+        \end{equation}
+        These results show a vast difference between the return periods predicted by the solar wind speed and the solar wind ram pressure and the return period predicted by the Interplanetary Magnetic Field. As the solar wind speed measurements were not available for 29 October 2003, the return periods based on the solar wind speed and the solar wind ram pressure are most likely compromised, making the return period based on the IMF strength the most reliable result. This is further enforced by the fact that the most extreme IMF strength on 28 October 2003 was $B_x=-11.3nT$, while on 29 October 2003, it was $B_x=-43.6nT$, showing a vast difference between the strength of the storm between these two days. Based only on the data collected on 28 October 2003, the return period based on the fact that $B_x=-11.3nT$ would have been $R=0.46\ years$, which is of the same magnitude as the other, most likely compromised return periods. Due to these complications, it is safe to say that the only reliable return period is based on the IMF strength ($B_x=-43.6nT$), and therefore the predicted return period for an event similar to the 2003 Halloween storms is $R=201\ years$.
     \subsection{Effects of the Solar Wind on the Magnetopause of Earth}\label{sec:magnetoPAUSE}
-        DISCUSS THE DYNAMICS OF MAGNETOSHEATH AND HOW THE RAM PRESSURE AND MAGNETIC PRESSURE BALANCE WORKS. DISCUSS THE RAM PRESSURE (AND HENCE THE SOLAR WIND VELOCITY) NECESSARY TO PUSH THE MAGNETOPAUSE BEHIND THE ORBIT OF GEOSTATIONARY SATELLITES. DISCUSS WHY THIS IS IMPORTANT. DISCUSS RETURN LEVELS FOR THIS SOLAR WIND VELOCITY.
+        When the solar wind is relatively at rest (displaying normal, non-extreme properties), the position of the Earth's magnetopause is determined by a delicate balance between the solar wind ram pressure and the magnetic pressure from the Earth's Magnetosphere. The formula for the solar wind ram pressure is:
+        \begin{equation}
+            P_{sw}=n_p*m_p*V^2
+        \end{equation}
+        where $n_p$ is the proton density, $m_p$ is the proton mass and $V$ is the solar wind speed. The formula for the magnetic pressure is:
+        \begin{equation}
+            P_{m}=\frac{B^2}{2\mu_0}
+        \end{equation}
+        where $\mu_0$ is the permeability of free space and $B$ is the magnetic field strength, calculated using the formula for the magnetic field of a magnetic dipole:
+        \begin{equation}
+            B=\frac{\mu_0m}{4\pi R^3}
+        \end{equation}
+        where $\mu_0$ is the permeability of free space, $m$ is the magnetic dipole moment of the Earth and $R$ is the distance from the dipole. This formula also assumes, that the point of interest is on the plane of the equator. To calculate the solar wind ram pressure needed to push the magnetopause inside the geostationary orbit, the following values have been assumed for constants and variables at the point of balance between the solar wind ram pressure and the magnetic pressure ($P_{sw}=P{m}$): $m=8.22*10^{22}Am^{-2}$ and $R=R_{GEO}=42164km$.\\ \\
+        This means that the solar wind ram pressure required to push the magnetosphere inside the geostationary orbit is:
+        \begin{equation}
+            P_{sw}=P_{m}=4.78nPa
+        \end{equation}
+        Based on this return level, the following return period for the magnetopause being pushed inside the geostationary orbit has been calculated:
+        \begin{equation}
+            P=4.78nPa\rightarrow R=2.75*10^{-3}\ years\approx1\ day
+        \end{equation}
+        If the magnetic field strength at the geostationary orbit is calculated using the magnetic field strength measured on the surface of Earth (on the equator), and use the proportionality between the magnetic field strength of a magnetic dipole and the distance from said dipole ($B\propto r^{-3}$), a new estimate for the solar wind ram pressure needed can be determined:
+        \begin{equation}
+            P_{sw}=17.7nPa
+        \end{equation}
+        This increase in the pressure needed would mean, that the return period would increase as well:
+        \begin{equation}
+            P=17.7nPa\rightarrow R=4.09*10^{-3}\ years\approx1.5\ day
+        \end{equation}
+        These results of course do not consider the existence of a bow shock in front of the magnetopause, hence the solar wind ram pressure required to push the magnetopause inside the geostationary orbit is most likely reasonably higher than $P_{sw}=4.78nPa$ or $P_{sw}=17.7nPa$, which would result in a much longer return period.
 \section{Conclusion/Future Work}\label{sec:conclusions}
     SELF EXPLANATORY, BASED ON THE REST OF THE SECTIONS. CAN EASILY BE CHANGED AFTER THE REST OF THE REPORT HAS BEEN WRITTEN
-\newpage
+\newpage{}
 \pagenumbering{alph}
 
 \bibliographystyle{unsrt}
