@@ -5,7 +5,7 @@
 \usepackage{amsmath}
 \usepackage[font={small,it}]{caption}
 
-\title{\vspace{-2em}A Statistical Analysis of the Extreme Properties of Solar Wind}
+\title{\vspace{-1em}A Statistical Analysis of the Extreme Properties of Solar Wind}
 \author{Benedek Kovács\\ Supervisor: Prof. Jim Wild}
 \date{} 
 
@@ -14,7 +14,7 @@
 \newgeometry{margin=1.3in}
 \maketitle
 \begin{center}
-        \makebox[\textwidth]{\includegraphics[width=\textwidth]{fig_other/LU_Logo_Physics.jpg}}
+        \makebox[\textwidth]{\includegraphics[width=0.7\textwidth]{fig_other/LU_Logo_Physics.jpg}}
 \end{center}
 \bigskip
 \begin{abstract}
@@ -28,10 +28,10 @@
 
 \section{Introduction}\label{sec:introduction}
     \subsection{Space Weather Effects}\label{sec:spaceweather}
-        Geomagnetic storms are causing a larger and larger headache, as humanity becomes more and more reliant on electricity. In the last approximately 30 years, geomagnetic storms caused at least two major and several minor disturbances, both on the surface of Earth and in satellites. During the storm of 1989, the Hydro-Québec power-system experienced a major blackout, with other, mostly North American countries affects by it as well\cite{1989hydroquebec}. In 2003, the 'Halloween Storm' \cite{2003halloweensweden} caused power outages in Sweden and damaged or completely incapacitated several satellites. Recently, in February 2022, a smaller geomagnetic storm impacted several satellites in low-Earth orbit\cite{2022spacex}.\\ \\
+        Geomagnetic storms are causing a larger and larger headache, as humanity becomes more and more reliant on electricity. In the last approximately 30 years, geomagnetic storms caused at least two major and several minor disturbances, both on the surface of Earth and in satellites. During the storm of 1989, the Hydro-Québec power-system experienced a major blackout, with other, mostly North American countries affected by it as well\cite{1989hydroquebec}. In 2003, the `Halloween Storm' \cite{2003halloweensweden} caused power outages in Sweden and damaged or completely incapacitated several satellites. Recently, in February 2022, a smaller geomagnetic storm impacted several satellites in low-Earth orbit\cite{2022spacex}.\\ \\
         This report aims to study the properties of the solar wind and the Interplanetary Magnetic Field to infer the possibilities and probabilities of the events mentioned above happening again. This can help in forecasting these events and preventing, or at least limiting the damage caused by them. The main outcomes of this report are estimations of the relationships between return levels and return periods for the Interplanetary Magnetic Field, solar wind velocities and solar wind ram pressures in Section \ref{sec:returnperiod}. Further discussion of these topics and their relations to the return periods of an event similar to the Carrington Event or the 2003 Halloween Storms are examined in Section \ref{sec:carrington} and Section \ref{sec:halloween}.
     \subsection{Previous Studies}\label{sec:prevstudies}
-        Previous studies often examine the patterns in solar wind data, but most of the time, these studies only investigate the trends and the fairly common data points, not the extremely small/large or the extremely rare data points. Russell's tutorial on solar wind and the Interplanetary Magnetic Field\cite{2001russell} includes several useful graphs and histograms describing solar wind and the IMF. This includes histograms showing the distribution of magnetic field strength at 1 AU distance from the Sun, which can be seen on Figures \ref{fig:russellBX}, \ref{fig:russellBY} and \ref{fig:russellBZ}. These histograms are great at showing the trends and usual data points, but lack depth at showing data points of extremely small or large IMF strength, as they seem to have a minimum and a maximum cut-off.\\
+        Previous studies often examine the patterns in solar wind data, but most of the time, these studies only investigate the trends and the fairly common data points, not the extremely small/large or the extremely rare data points. Russell's tutorial on solar wind and the Interplanetary Magnetic Field\cite{2001russell} includes several useful graphs and histograms describing solar wind and the IMF. This includes histograms showing the distribution of magnetic field strength at 1 AU distance from the Sun, which can be seen on Figures \ref{fig:russellBX}, \ref{fig:russellBY} and \ref{fig:russellBZ}. These histograms are helpful at showing the trends and usual data points, but lack depth at showing data points of extremely small or large IMF strength, as they seem to have a minimum and a maximum cut-off, due to the scaling of the graphs.\\
         Using data described in Section \ref{sec:data}, an array of histograms (Figure \ref{fig:hist_imf}) has been created to show the more extreme values as well.\\ \\ 
         \begin{figure}[t!]
             \begin{minipage}{0.48\textwidth}
@@ -69,8 +69,8 @@
         Examining Figure \ref{fig:hist_imf}, the quick drop-off at around -20nT on the top row of graphs shows that we can expect no extremely low or extremely high value for magnetic field measurements at the L1 point. More extreme values appear on the graphs of intermediate and maximum solar activity for $B_y$ and $B_z$, but they mostly seem to drop off at a fairly constants rate, suggesting that this is not due to an external effect. This does not seem to hold for the graphs showing the intermediate and maximum solar activity for $B_x$. The end tails in these graphs do not drop off smoothly, but instead have quite a few spikes between -30nT and -40 nT. This suggest that the ordinary behaviour of the IMF breaks, most likely due to an external event, like a coronal mass ejection, which would release a large amount of fast solar wind, carrying a larger magnetic field due to Alfvén's theorem\cite{1976alfven}.
 \section{Background Theory}\label{sec:theory}
     \subsection{Properties of Solar Wind}\label{sec:solarwind}
-        In 1958, Eugene Parker predicted the existence of solar wind\cite{1958parker}. 8 decades later we understand solar wind a lot better and use modern equipment (e.g. satellites) to measure its properties and the magnetic field brought along with it.\\ \\
-        Today, we understand that solar wind is made up of plasma, overwhelmingly made up of electrons and hydrogen nuclei (protons). Solar wind also contains heavier ions in the shape of heavier nuclei (mostly alpha particles), but the overwhelming majority of the solar wind is made up of electrons and protons (approximately 2.5\%-3.6\% of the solar wind consists of helium ions\cite{2006schwenn}). In this report, a composition of 50\% protons and 50\% electrons was assumed. Even though the solar wind is made up of charged particles, on large scales, it is considered neutral, therefore it is called quasi-neutral\cite{2007meyer}. This shows that it is approximately made up of equal number of positively and negatively charged particles.\\
+        In 1958, Eugene Parker predicted the existence of solar wind\cite{1958parker}. 8 decades later we understand the solar wind a lot better and use modern equipment (e.g. satellites) to measure its properties and the magnetic field brought along with it.\\ \\
+        Today, we understand that solar wind is made up of plasma, overwhelmingly composed of electrons and hydrogen nuclei (protons). Solar wind also contains heavier ions in the shape of heavier nuclei (mostly alpha particles), but the overwhelming majority of the solar wind is made up of electrons and protons (approximately 2.5\%-3.6\% of the solar wind consists of helium ions\cite{2006schwenn}). In this report, a composition of 50\% protons and 50\% electrons was assumed. This assumption was important for the calculations related to the solar wind ram pressure later in this report. Even though the solar wind is made up of charged particles, on large scales, it is considered neutral, therefore it is called quasi-neutral\cite{2007meyer}. This shows that it is approximately made up of equal number of positively and negatively charged particles.\\
         \begin{table}[t!]
             \begin{center}
                 \begin{tabular}{|l|c|c|} \hline
@@ -87,14 +87,14 @@
         \end{table}\\
         There are two different types of solar wind, which are different from each other to a great extent in their origin and other properties: the slow solar wind and the fast solar wind. Table \ref{tab:slowfast} shows the basic properties of slow and fast solar wind. The most important of these differences are their origin and their their velocity.\\ \\
         Although the exact origins of solar wind is still not understood completely, it is known that slow solar wind originates from open magnetic field lines in the Heliosphere. Due to Alfvén's theorem\cite{1976alfven}, the solar wind plasma flows along magnetic lines (and magnetic field lines follow the flow of plasma), hence it can move away from the Sun along open magnetic field lines. Conversely, fast solar wind originates from coronal holes, which are dense regions of open magnetic field lines. The stronger magnetic field in these regions allows solar wind to escape at a higher rate and higher velocity. Coronal holes are mostly unpredictable and temporary, therefore it is hard to forecast their activity.\\ \\
-        The second main difference between slow and fast solar wind is their velocity. The velocity distribution of solar wind in the x-direction is shown in the left-hand side column of Figure \ref{fig:hist_sw}. The variance in the velocity of the slow solar wind is fairly low, between 250km/s and 400km/s. This is most likely due to the reliable and constant nature of its origin. Contrarily, the variance in the velocity of the fast solar wind is fairly high, between 400km/s and 800km/s, although rarely it does flow even faster that (as it is visible on Figure \ref{fig:hist_sw}).\\
+        The second main difference between slow and fast solar wind is their velocity. The velocity distribution of solar wind in the x-direction is shown in the left-hand side column of Figure \ref{fig:hist_sw}. The variance in the velocity of the slow solar wind is fairly low, between $250\,$km/s and $400\,$km/s. This is most likely due to the reliable and constant nature of its origin. Contrarily, the variance in the velocity of the fast solar wind is fairly high, between $400\,$km/s and $800\,$km/s, although rarely it does flow even faster that (as it is visible on Figure \ref{fig:hist_sw}).\\
         \begin{figure}[t!]
             \centering
             \includegraphics[width=\textwidth]{fig_theory/hist_sw_velocity.png}
             \caption{Histograms showing the velocity of the solar wind at point L1 (in km/s). Data has been separated into 9 different batches based on coordinates in the GSM coordinate system and the solar activity level at the time of measurement. Each row refers to a different solar activity level (minimum, intermediate or maximum) and each column refers to a different coordinate (x, y or z). The red lines indicate the mean, the green lines indicate $1\sigma$ distance from the mean and the purple lines indicate $5\sigma$ distance from the mean.}
             \label{fig:hist_sw}
         \end{figure}\\
-        Figure \ref{fig:hist_sw} shows the distribution of solar wind velocity separated based on solar activity level. The most interesting graphs are the histograms of the distribution of $V_x$. $V_y$ and $V_z$ have a fairly even distribution centered around 0km/s with a low variance, no matter the solar activity level. The $B_x$ histograms show a sudden drop at around -250km/s, suggesting that solar wind is rarely slower than that. The most common velocity on these graphs is around -400km/s, which matches the average velocity of slow solar wind\cite{2001russell} (more in Section \ref{sec:solarwind}). A small spike is visible at around -700km/s, which approximately matches the average velocity of fast solar wind\cite{2001russell}. This suggests that slow solar wind is much more abundant, than fast solar wind.
+        Figure \ref{fig:hist_sw} shows the distribution of solar wind velocity separated based on solar activity level. The most interesting graphs are the histograms of the distribution of $V_x$. $V_y$ and $V_z$ have a fairly even distribution centered around 0km/s with a low variance, no matter the solar activity level. The $B_x$ histograms show a sudden drop at around $-250\,$km/s, suggesting that solar wind is rarely slower than that. The most common velocity on these graphs is around $-400\,$km/s, which matches the average velocity of slow solar wind\cite{2001russell} (more in Section \ref{sec:solarwind}). A small spike is visible at around $-700\,$km/s, which approximately matches the average velocity of fast solar wind\cite{2001russell}. This suggests that slow solar wind is much more abundant, than fast solar wind.
     \subsection{Solar Magnetic Activity Cycle}\label{sec:solarcycle}
         Solar cycles are approximately 11-year long cycles, during which the north pole and the south pole of the Sun switch around. This happens during maximum solar activity (or more accurately, maximum solar activity happens, when the poles of the Sun switch around). The solar activity level (and hence the properties of the cycle itself) are measured by counting the number of sunspots visible on the surface of the Sun. Figure \ref{fig:sunspots} shows the average number of sunspots counted, beginning around 1750. The graphs clearly show a periodicity in the average number of sunspots counted, with a period of approximately 11 years. It is also important to note, that the maximum of every period can extremely differ from each other (e.g. the maximum average sunspot number in Solar Cycle 5 was around 70, while in Solar Cycle 19 it was around 250).\\
         \begin{figure}[t!]
@@ -107,7 +107,7 @@
         \begin{figure}[t!]
             \centering
             \includegraphics[width=0.8\textwidth]{fig_theory/sw_speed_distribution.PNG}
-            \caption{Changes is the fractional areas divided by solar wind speed from 1985 to 2008. On the top, fractional areas compared to the whole surface of the Sun are visible, while on the bottom, fractional areas compared to the measured surface area of the Sun are visible. The colour codes are the following: red: $<445km/s$; yellow $445-530km/s$; green $530-615km/s$; cyan: $615-700km/s$; blue: $>700km/s$. Source: \cite{2010tokumaru}}
+            \caption{Changes is the fractional areas divided by solar wind speed from 1985 to 2008. On the top, fractional areas compared to the whole surface of the Sun are visible, while on the bottom, fractional areas compared to the measured surface area of the Sun are visible. The colour codes are the following: red: $<445\,km/s$; yellow $445-530\,km/s$; green $530-615\,km/s$; cyan: $615-700\,km/s$; blue: $>700\,km/s$. Source: \cite{2010tokumaru}}
             \label{fig:sw_speeds}
         \end{figure}\\
         To observe and understand the different properties of solar wind and the Interplanetary Magnetic Field during different solar activity levels, the data used in this report (more in Section \ref{sec:data}) has been split into 3 categories, based in the solar activity level: minimum solar activity, intermediate solar activity and maximum solar activity. This process required a data set containing the minimum, intermediate and maximum periods, with their start and finish date. For this, data from the SILSO database (\textit{SILSO data/image, Royal Observatory of Belgium, Brussels}) has been used.\\ \\
@@ -117,13 +117,13 @@
         \begin{figure}[t!]
             \centering
             \includegraphics[width=0.6\textwidth]{fig_theory/lagrange.jpg}
-            \caption{Positions of Lagrange Points. Lagrange Points are points in space, at which small-mass objects will stay in place, when compared to two certain large-mass objects (e.g. the Sun and the Earth). The ACE can be found orbiting the L1 Point, as it's a great place to measure the properties of the solar wind without having to correct the orbit of the satellite. Source: \cite{lagrangeimage}}
+            \caption{Positions of Lagrange Points. Lagrange Points are points in space, at which small-mass objects will stay in place, when compared to two certain large-mass objects (e.g. the Sun and the Earth). The ACE can be found orbiting the L1 Point, as it's a great place to measure the properties of the solar wind without having to correct the orbit of the satellite. Figure not to scale. Source: \cite{lagrangeimage}}
             \label{fig:l1}
         \end{figure}\\
-        Measurements of the Interplanetary Magnetic Field have been collected using the magnetometer on the ACE\cite{1998acemag}. Measurements of the solar wind velocity have been collected using the Solar Wind Electron Proton Alpha Monitor on the ACE\cite{1998aceswepam}.
-    \subsection{Generalized Extreme Value Distribution}\label{sec:gev}
-        The Generalized Extreme Value Distribution is used to model the extreme value of data sets and to extrapolate even more extreme values, using an existing data set. It can model both extremely high or extremely low data, depending on the context. For example modelling extremely high data would be the sea-level in a port. Modelling extremely low data would be the solar wind velocity between the Sun and the Earth, using the GSM coordinate system (due to the coordinate system, the more negative values would be interpreted as more extreme). Multiple different methods and distributions exists to model the extreme values of a data set.\\ \\
-        The Generalized Extreme Value Distribution uses the maximum (or minimum) values from several periods of the same length from the same data set (e.g. the maximum value each day). The maximum value from each period is represented by $M_n$:
+        Measurements of the Interplanetary Magnetic Field have been collected using the magnetometer on the ACE\cite{1998acemag}. Measurements of the solar wind velocity have been collected using the Solar Wind Electron Proton Alpha Monitor on the ACE\cite{1998aceswepam}. The raw data has been retrieved from \hlink{https://cdaweb.gsfc.nasa.gov/}
+    \subsection{Generalised Extreme Value Distribution}\label{sec:gev}
+        The Generalised Extreme Value Distribution is used to model the extreme value of data sets and to extrapolate even more extreme values, using an existing data set. It can model both extremely high or extremely low data, depending on the context. For example modelling extremely high data would be the sea-level in a port. Modelling extremely low data would be the solar wind velocity between the Sun and the Earth, using the GSM coordinate system (due to the coordinate system, the more negative values would be interpreted as more extreme). Multiple different methods and distributions exists to model the extreme values of a data set.\\ \\
+        The Generalised Extreme Value Distribution uses the maximum (or minimum) values from several periods of the same length from the same data set (e.g. the maximum value each day). The maximum value from each period is represented by $M_n$:
         \begin{equation}
             M_n = max\{X_1, X_2, ..., X_{n-1}, X_n\}
         \end{equation}
@@ -132,8 +132,8 @@
         \begin{equation}
             Pr\Bigg\{ \frac{M_n - b_n}{a_n} \leq z\Bigg\} \rightarrow G(z)
         \end{equation}
-        where $G(z)$ is the Generalized Extreme Value Distribution\cite{2001coles}.\\ \\
-        The cumulative distribution function for the Generalized Extreme Value Distribution is represented by the following equation\cite{2001coles}:
+        where $G(z)$ is the Generalised Extreme Value Distribution\cite{2001coles}.\\ \\
+        The cumulative distribution function for the Generalised Extreme Value Distribution is represented by the following equation\cite{2001coles}:
         \begin{equation}
             G(z) = exp\Bigg [-\Bigg [1+\xi \Bigg (\frac{z-\mu}{\sigma}\Bigg )\Bigg ]^{-1/\xi}\Bigg ]
         \end{equation}
@@ -145,7 +145,7 @@
         \begin{figure}[t!]
             \centering
             \includegraphics[width=\textwidth]{fig_theory/gev.png}
-            \caption{Cumulative distribution functions (left) and probability density functions (right) for the Generalized Extreme Value Distribution, with constant $\mu$ (location) parameter and varying $\sigma$ (scale) and $\xi$ (shape) parameters.}
+            \caption{Cumulative distribution functions (left) and probability density functions (right) for the Generalised Extreme Value Distribution, with constant $\mu$ (location) parameter and varying $\sigma$ (scale) and $\xi$ (shape) parameters.}
             \label{fig:gev}
         \end{figure}\\
         To model the distribution of minima, $-z$ should be used instead of $z$. The parameters of the distribution can be determined using several methods (e.g. using maximum likelihood estimation).
@@ -188,7 +188,7 @@
         \end{equation}
 \section{Method and Data Processing}\label{sec:method}
     \subsection{The Data}\label{sec:data}
-        As already mentioned in Section \ref{sec:equipment}, the data used in this report has been collected by the MAG\cite{1998acemag} and the SWEPAM\cite{1998aceswepam} instruments on the NASA's Advanced Composition Explorer (ACE)\cite{1998ace}. The data collected by the MAG instrument (from now on, MAG data), used to analyze the Interplanetary Magnetic Field at L1 ranges from 01/01/1998 to 25/07/2021, while the data collected by the SWEPAM instrument (from now on, SWEPAM data), used to analyze the solar wind speed at L1 ranges from 04/02/1998 to 17/01/2021, meaning that for both data sets, more than 22 years of data has been used. To determine the solar wind ram pressure, data points only found in both of these data sets have been used, therefore the solar wind ram pressure data ranges from 04/02/1998 to 17/01/2021. Both data sets include the data divided in to separate files day by day and include measurements of the strength of the Interplanetary Magnetic Field (MAG data) and the solar wind speed (SWEPAM data) in form of 3-dimensional vectors, representing the data in GSM coordinates. Throughout this report, it should be assumed that data concerning the strength of the Interplanetary Magnetic Field is in units of nT, data concerning the solar wind speed is in units of km/s and data concerning the solar wind ram pressure is in units of nPa.\\ \\
+        As already mentioned in Section \ref{sec:equipment}, the data used in this report has been collected by the MAG\cite{1998acemag} and the SWEPAM\cite{1998aceswepam} instruments on the NASA's Advanced Composition Explorer (ACE)\cite{1998ace}. The data collected by the MAG instrument (from now on, MAG data), used to analyse the Interplanetary Magnetic Field at L1 ranges from 01/01/1998 to 25/07/2021, while the data collected by the SWEPAM instrument (from now on, SWEPAM data), used to analyze the solar wind speed at L1 ranges from 04/02/1998 to 17/01/2021, meaning that for both data sets, more than 22 years of data has been used. To determine the solar wind ram pressure, data points only found in both of these data sets have been used, therefore the solar wind ram pressure data ranges from 04/02/1998 to 17/01/2021. Both data sets include the data divided in to separate files day by day and include measurements of the strength of the Interplanetary Magnetic Field (MAG data) and the solar wind speed (SWEPAM data) in form of 3-dimensional vectors, representing the data in GSM coordinates. Throughout this report, it should be assumed that data concerning the strength of the Interplanetary Magnetic Field is in units of nT, data concerning the solar wind speed is in units of km/s and data concerning the solar wind ram pressure is in units of nPa.\\ \\
         It is important to note, that while the MAG data includes measurements every second (86400 measurements per day), and hence it can be assumed, that the difference between the measured daily maxima (minima) and the actual daily maxima (minima) is negligible, the same cannot be stated about the SWEPAM data. The SWEPAM data includes measurements every hour (24 per measurements day), therefore a slight difference between the measured daily maxima (minima) and the actual daily maxima (minima) should be expected and the result should be used with caution.\\ \\
         As already mentioned in Section \ref{sec:solarcycle}, data concerning the solar activity periods (more accurately, solar activity maximums and minimums) have been found in the SILSO database (\textit{SILSO data/image, Royal Observatory of Belgium, Brussels}).
     \subsection{Assumptions and Data Processing}\label{sec:dataproc}
@@ -203,7 +203,7 @@
         \begin{enumerate}
             \item A list of solar activity periods have been prepared, containing the dates the periods begin and end, and the type of period it is (minimum, intermediate or maximum solar activity).
             \item For every file (one day of measurements), the following process has been followed: the invalid measurements from the IMF strength (and alike from the solar wind speed) data for x, y and z coordinates have been removed and the daily minima and maxima have been determined. These data points have been separated based on coordinate, solar activity the given day belongs to and whether the list contains the minima or the maxima for the given solar activity and coordinate.\label{stepcontinue}
-            \item To each of the data points in a list, the ratio of data points lower (higher for minima) has been assigned. For each property (coordinate, solar activity level and minima/maxima), a line of best fit was fitted, using Generalized Extreme Value Distribution and the least square method, then the parameters of the distribution have been determined. Graphs of cumulative distributions functions and probability density functions (based on the parameters determined by the cumulative density functions) have been plotted.
+            \item To each of the data points in a list, the ratio of data points lower (higher for minima) has been assigned. For each property (coordinate, solar activity level and minima/maxima), a line of best fit was fitted, using Generalised Extreme Value Distribution and the least square method, then the parameters of the distribution have been determined. Graphs of cumulative distributions functions and probability density functions (based on the parameters determined by the cumulative density functions) have been plotted.
             \item Using the method described in Section \ref{sec:returnlevel}, the errors in the parameters have been determined.
             \item For each property, a graph of return level against return period has been plotted. The return levels have been plotted for return period values between 0.1 year and 1000 years. Then, using the method described in Section \ref{sec:returnlevel}, the errors in the return levels have been determined.
         \end{enumerate}
@@ -211,7 +211,7 @@
         \begin{equation}
             P=n*m_p*V^2
         \end{equation}
-        where $n$ is the proton density (the electron density is negligible, as electrons have negligible mass and therefore do not contribute to the solar wind ram pressure), $m_p$ is the mass of a proton and $V$ is the solar wind bulk velocity. Then, the daily minima and maxima have been determined and the same process from Step \ref{stepcontinue}. has been followed. It is important to note, that for solar wind ram pressure, the data has not been separated based on coordinates, as solar wind ram pressure in the y and z-directions is negligible.
+        where $n$ is the proton density (the electron density is negligible, as electrons have negligible mass and therefore do not contribute to the solar wind ram pressure), $m_p$ is the mass of a proton and $V$ is the solar wind bulk velocity. Then, the daily minima and maxima have been determined and the same process from Step \ref{stepcontinue}. has been followed. It is important to note, that for solar wind ram pressure, the data has not been separated based on coordinates, as solar wind ram pressure in the y and z-directions is negligible due to the small velocity components.
     \subsection{Distributions of Daily Minima and Maxima}\label{sec:dailydist}
         \begin{figure}[t!]
             \begin{minipage}{0.48\textwidth}
@@ -268,13 +268,13 @@
         \begin{equation}
             G(z) = exp\Bigg [-\Bigg [1+0.066 \Bigg (\frac{-z-5.366}{2.358}\Bigg )\Bigg ]^{-1/0.066}\Bigg ]
         \end{equation}\\ \\
-        The graphs on Figure \ref{fig:MFImaxZmin} describe the distribution of the daily minima of the IMF in the z-direction, during maximum solar activity. For the purposes of this study, daily maxima could have been selected as well, as the distribution of the magnetic field strength in the z-direction is fairly symmetric around $B_z=0nT$ (see Figure \ref{fig:hist_imf}). The graph of daily minima has been selected, as this will give an easier way to predict the return period of a 'Carrington Event'-like geomagnetic storm (more in Section \ref{sec:carrington}).\\ \\
+        The graphs on Figure \ref{fig:MFImaxZmin} describe the distribution of the daily minima of the IMF in the z-direction, during maximum solar activity. For the purposes of this study, daily maxima could have been selected as well, as the distribution of the magnetic field strength in the z-direction is fairly symmetric around $B_z=0\,$nT (see Figure \ref{fig:hist_imf}). The graph of daily minima has been selected, as this will give an easier way to predict the return period of a 'Carrington Event'-like geomagnetic storm (more in Section \ref{sec:carrington}).\\ \\
         The equation describing the cumulative distribution function on Figure \ref{fig:MFImaxZmin} is the following:
         \begin{equation}
             G(z) = exp\Bigg [-\Bigg [1+0.192 \Bigg (\frac{-z-6.092}{2.593}\Bigg )\Bigg ]^{-1/0.192}\Bigg ]
         \end{equation}\\ \\
         The graphs on Figures \ref{fig:SWEminXmin}, \ref{fig:SWEintXmin} and \ref{fig:SWEmaxXmin} describe the distributions of the daily minima of the solar wind speed in the x-direction, during minimum, intermediate and maximum solar activity, respectively. While the parameters on Figures \ref{fig:SWEintXmin} and \ref{fig:SWEmaxXmin} are similar mostly similar (except for the shape parameter, $\xi$), the parameters on Figure \ref{fig:SWEminXmin} are more different (smaller location parameter, $\mu$ and smaller scale parameter, $\sigma$), suggesting that the behaviour of the solar wind speed is similar during intermediate and maximum solar activity, while it's different during minimum solar activity. The smaller location parameter would suggest more extreme behaviour during minimum solar activity, while the smaller shape parameter would suggest less extreme behaviour in this period. The overall effects of these parameters will be shown in Section \ref{sec:returnperiod}.\\ \\
-        Figures \ref{fig:SWEminXmin} and \ref{fig:SWEintXmin} show a slight digression of the daily minima at around $-800km/s$. This is due to the presence of fast solar wind and its large difference of speed from the speed of slow solar wind. This disturbs the otherwise reasonable fir of the Generalised Extreme Value Distribution, which would lead to inaccurate return levels and return periods.\\ \\
+        Figures \ref{fig:SWEminXmin} and \ref{fig:SWEintXmin} show a slight digression of the daily minima at around $-800\,$km/s. This is due to the presence of fast solar wind and its large difference of speed from the speed of slow solar wind. This disturbs the otherwise reasonable for of the Generalised Extreme Value Distribution, which would lead to inaccurate return levels and return periods.\\ \\
         The equation describing the cumulative distribution function on Figure \ref{fig:SWEminXmin} is the following:
         \begin{equation}
             G(z) = exp\Bigg [-\Bigg [1+0.159 \Bigg (\frac{-z-389.221}{78.528}\Bigg )\Bigg ]^{-1/0.159}\Bigg ]
@@ -398,7 +398,7 @@
         \end{equation}
         and the equation describing the relationship on Figure \ref{fig:SWEmaxXminReturn} is:
         \begin{equation}
-            z_p = -423.107+\frac{90.772}{0.078}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0-078}\Bigg)
+            z_p = -423.107+\frac{90.772}{0.078}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.078}\Bigg)
         \end{equation}
         \begin{figure}[t!]
             \begin{minipage}{0.48\textwidth}
@@ -426,14 +426,14 @@
 \section{Discussion}\label{sec:discussion}
     \subsection{Reaction Time for Measurements at L1 Lagrange Point}
         When preparing to take action in case the satellite at the L1 point detects high speed solar wind or a strong magnetic field, it is important to know the response time available from the moment of detection. To estimate the response time available, the time taken for the solar wind to travel from the L1 point to the satellites or the surface of the Earth needs to be calculated. Since most of the satellites orbit the Earth at a height of a few thousand kilometres, the time it takes for the high speed solar wind to travel from the L1 point to the Earth and the time it takes for it to travel from the L1 point to most satellites orbiting Earth will be approximately the same.\\ \\
-        The distance between the Earth and the L1 point is approximately $1.5\ million\ km = 1.5*10^9m$. From Table \ref{tab:slowfast}, the minimum speed of fast solar wind is around $400km/s$, while in extreme cases, it can be a lot faster, than that. A prime example for a geomagnetic disturbance causing damage is the Halloween Storms in 2003. Using the data set described in Section \ref{sec:data}, the maximum speed of the solar wind during the 2003 Halloween Storms was approximately $870km/s = 8.7*10^5m/s$ in the negative x-direction, towards the Earth.\\ \\
+        The distance between the Earth and the L1 point is approximately $1.5$ million km $ = 1.5*10^9\,$m. From Table \ref{tab:slowfast}, the minimum speed of fast solar wind is around $400\,$km/s, while in extreme cases, it can be a lot faster, than that. A prime example for a geomagnetic disturbance causing damage is the Halloween Storms in 2003. Using the data set described in Section \ref{sec:data}, the maximum speed of the solar wind during the 2003 Halloween Storms was approximately $870\,$km/s $ = 8.7*10^5\,$m/s in the negative x-direction, towards the Earth.\\ \\
         Therefore, in case of the 2003 Halloween Storms, it took the solar wind:
         \begin{equation}
-            t=\frac{s}{v}=\frac{1.5*10^9}{8.7*10^5}\approx 1700s\approx 29\ minutes
+            t=\frac{s}{v}=\frac{1.5*10^9}{8.7*10^5}\approx 1700\,s\approx 29\ minutes
         \end{equation}
         to reach Earth. As seen on Figure \ref{fig:hist_sw}, the solar wind speed can (very rarely) increase to approximately $1200km/s$. At this speed, the reaction time would decrease to:
         \begin{equation}
-            t=\frac{s}{v}=\frac{1.5*10^9}{1.2*10^6}\approx 1250s\approx 21\ minutes
+            t=\frac{s}{v}=\frac{1.5*10^9}{1.2*10^6}\approx 1250\,s\approx 21\ minutes
         \end{equation}
         assuming constant solar wind speed. This means, that governments and affected companies would have approximately 20-30 minutes to react to approaching geomagnetic storms.
     \subsection{Estimating the Return Period of a 'Carrington Event'-like Geomagnetic Storm}\label{sec:carrington}
@@ -442,36 +442,36 @@
             \frac{3}{R}=\frac{1}{R_{minimum}}+\frac{1}{R_{intermediate}}+\frac{1}{R_{maximum}}
         \end{equation}
         where R is the averaged return period, $R_{minimum}$ is the return period during minimum solar activity, $R_{intermediate}$ is the return period during intermediate solar activity and $R_{maximum}$ is the return period during maximum solar activity.\\ \\
-        The Carrington Event is 1859 is estimated to be the largest geomagnetic storm ever recorded. At the time, direct measurements could not be made, due to lack of technology, therefore, several estimations are available about different properties of this event, based on measurements made of Earth. One article cites\cite{2013cliver} estimates that the solar wind speed reached $V_x=-1850 km/s$ and the southwards IMF strength reached $B_z\approx -65nT$. These estimations are also shown on Figure \ref{fig:returncarrington}.\\
+        The Carrington Event is 1859 is estimated to be the largest geomagnetic storm ever recorded. At the time, direct measurements could not be made, due to lack of technology, therefore, several estimations are available about different properties of this event, based on measurements made of Earth. One article cites\cite{2013cliver} estimates that the solar wind speed reached $V_x=-1850\,$km/s and the southwards IMF strength reached $B_z\approx -65\,$nT. These estimations are also shown on Figure \ref{fig:returncarrington}.\\
         \begin{figure}[t!]
             \centering
             \includegraphics[width=0.7\textwidth]{fig_discussion/carrington.png}
-            \caption{Approximations for the solar wind speed (top), the southward IMF strength (middle top) and the proton density (middle bottom) during the Carrington Event. Includes measurements and approximations of the disturbance storm index (Dst, bottom). As shown on the top graph, the maximum solar wind speed is approximated to be $\approx -1850 km/s$ and as shown on the middle top graph, the southward IMF strength is approximated to be $\approx 65nT$. Source: \cite{2006xinlin}}
+            \caption{Approximations for the solar wind speed (top), the southward IMF strength (middle top) and the proton density (middle bottom) during the Carrington Event. Includes measurements and approximations of the disturbance storm index (Dst, bottom). As shown on the top graph, the maximum solar wind speed is approximated to be $\approx -1850\,$km/s and as shown on the middle top graph, the southward IMF strength is approximated to be $\approx 65\,$nT. Source: \cite{2006xinlin}}
             \label{fig:returncarrington}
         \end{figure}\\
-        Another article\cite{2021blake} used $V_X\approx -2000km/s$ and $B_z=-118nT$ to simulate the Carrington Event. The differences between the estimations in these articles show, that it is nearly impossible to accurately estimate the maximum solar wind speed and the maximum southward IMF strength.\\
+        Another article\cite{2021blake} used $V_X\approx -2000\,$km/s and $B_z=-118\,$nT to simulate the Carrington Event. The differences between the estimations in these articles show, that it is nearly impossible to accurately estimate the maximum solar wind speed and the maximum southward IMF strength.\\
         Based on these 4 return levels (2 southward IMF strengths and 2 solar wind speeds), the following 4 return periods for an event comparable to the Carrington Event have been calculated:
         \begin{equation}
             \begin{split}
-                B_z\cite{2013cliver}\approx -65nT\rightarrow R\approx 21\ years\\
-                B_z\cite{2021blake}=-118nT\rightarrow R=317\ years\\ \\
-                V_x\cite{2013cliver}=-1850km/s\rightarrow R=24\ years\\
-                V_x\cite{2021blake}\approx -2000km/s\rightarrow R\approx 40\ years
+                B_z\cite{2013cliver}\approx -65\, nT\rightarrow R\approx 21\ years\\
+                B_z\cite{2021blake}=-118\, nT\rightarrow R=317\ years\\ \\
+                V_x\cite{2013cliver}=-1850\, km/s\rightarrow R=24\ years\\
+                V_x\cite{2021blake}\approx -2000\, km/s\rightarrow R\approx 40\ years
             \end{split}
         \end{equation}
-        As these results show, approximation and simulations to determine the maximum solar wind speed and the maximum southward IMF strength during the Carrington Event are far from perfect. The biggest outlier of these results is the approximation of the southward IMF strength of $B_z=-118nT$, which gives a return period of $R=317\ years$, while the other approximations all give a return period below $R=50\ years$. These results would suggest, that the true return period of an event similar to the Carrington Event would be between $R=20\ years$ and $R=320\ years$. This range of return periods does not hold any value or progress, since 20 years appears to be too small, as nothing comparable to the Carrington Event has happened since the Carrington Event itself, on the other hand, 320 years is too large, since adequate notes about geomagnetic storms before the Carrington Event do not exist and not enough time has elapsed since the Carrington Event to prove or disprove the validity of it. Therefore, the average of these values will be considered the return period of an event similar to the Carrington Event, but it is important to note, that the uncertainty of this value will be extremely high. After taking the average of the return periods mentioned above, the return period of an event similar to the Carrington Event was determined to be $R\approx 103\pm 72\ years$.
+        As these results show, approximation and simulations to determine the maximum solar wind speed and the maximum southward IMF strength during the Carrington Event are far from perfect. The biggest outlier of these results is the approximation of the southward IMF strength of $B_z=-118\,$nT, which gives a return period of $R=317\ years$, while the other approximations all give a return period below $R=50\ years$. These results would suggest, that the true return period of an event similar to the Carrington Event would be between $R=20\ years$ and $R=320\ years$. This range of return periods does not hold any value or progress, since 20 years appears to be too small, as nothing comparable to the Carrington Event has happened since the Carrington Event itself, on the other hand, 320 years is too large, since adequate notes about geomagnetic storms before the Carrington Event do not exist and not enough time has elapsed since the Carrington Event to prove or disprove the validity of it. Therefore, the average of these values will be considered the return period of an event similar to the Carrington Event, but it is important to note, that the uncertainty of this value will be extremely high. After taking the average of the return periods mentioned above, the return period of an event similar to the Carrington Event was determined to be $R\approx 103\pm 72\ years$.
     \subsection{Estimating the Return Period of a 'Halloween'-like Geomagnetic Storm}\label{sec:halloween}
-        The 2003 Halloween Storms is one of the largest geomagnetic storms with precisely measured properties. Measurements of different maximum values during the Halloween Storms have all been taken from the data set used in this report. The largest (smallest) values from the 2 days the storm was raging have been used (28 October 2003 and 29 October 2003). It is important to note, that measurements of solar wind speed were not available on 29 October 2003, therefore the actual solar wind speed might be more extreme, which would result in a longer return period. It has been determined, that the following extreme values characterise the 2003 Halloween Storms: $B_x=-43.6nT$, $V_x=-804km/s$, $P=54.0nPa$. Based on these values, the following 3 return periods for an event similar to the Halloween Storms have been calculated:
+        The 2003 Halloween Storms is one of the largest geomagnetic storms with precisely measured properties. Measurements of different maximum values during the Halloween Storms have all been taken from the data set used in this report. The largest (smallest) values from the 2 days the storm was raging have been used (28 October 2003 and 29 October 2003). It is important to note, that measurements of solar wind speed were not available on 29 October 2003, therefore the actual solar wind speed might be more extreme, which would result in a longer return period. It has been determined, that the following extreme values characterise the 2003 Halloween Storms: $B_x=-43.6\,$nT, $V_x=-804\,$km/s, $P=54.0\,$nPa. Based on these values, the following 3 return periods for an event similar to the Halloween Storms have been calculated:
         \begin{equation}
             \begin{split}
-                B_x=-43.6nT\rightarrow R=201\ years\\
-                V_x=-804km/s\rightarrow R=0.11\ years\\
-                P=54.0nPa\rightarrow R=0.022\ years
+                B_x=-43.6\, nT\rightarrow R=201\ years\\
+                V_x=-804\, km/s\rightarrow R=0.11\ years\\
+                P=54.0\, nPa\rightarrow R=0.022\ years
             \end{split}
         \end{equation}
-        These results show a vast difference between the return periods predicted by the solar wind speed and the solar wind ram pressure and the return period predicted by the Interplanetary Magnetic Field. As the solar wind speed measurements were not available for 29 October 2003, the return periods based on the solar wind speed and the solar wind ram pressure are most likely compromised, making the return period based on the IMF strength the most reliable result. This is further enforced by the fact that the most extreme IMF strength on 28 October 2003 was $B_x=-11.3nT$, while on 29 October 2003, it was $B_x=-43.6nT$, showing a vast difference between the strength of the storm between these two days. Based only on the data collected on 28 October 2003, the return period based on the fact that $B_x=-11.3nT$ would have been $R=0.46\ years$, which is of the same magnitude as the other, most likely compromised return periods. Due to these complications, it is safe to say that the only reliable return period is based on the IMF strength ($B_x=-43.6nT$), and therefore the predicted return period for an event similar to the 2003 Halloween storms is $R=201\ years$.
+        These results show a vast difference between the return periods predicted by the solar wind speed and the solar wind ram pressure and the return period predicted by the Interplanetary Magnetic Field. As the solar wind speed measurements were not available for 29 October 2003, the return periods based on the solar wind speed and the solar wind ram pressure are most likely compromised, making the return period based on the IMF strength the most reliable result. This is further enforced by the fact that the most extreme IMF strength on 28 October 2003 was $B_x=-11.3\,$nT, while on 29 October 2003, it was $B_x=-43.6\,$nT, showing a vast difference between the strength of the storm between these two days. Based only on the data collected on 28 October 2003, the return period based on the fact that $B_x=-11.3\,$nT would have been $R=0.46\ years$, which is of the same magnitude as the other, most likely compromised return periods. Due to these complications, it is safe to say that the only reliable return period is based on the IMF strength ($B_x=-43.6\,$nT), and therefore the predicted return period for an event similar to the 2003 Halloween storms is $R=201\ years$.
     \subsection{Effects of the Solar Wind on the Magnetopause of Earth}\label{sec:magnetoPAUSE}
-        When the solar wind is relatively at rest (displaying normal, non-extreme properties), the position of the Earth's magnetopause is determined by a delicate balance between the solar wind ram pressure and the magnetic pressure from the Earth's Magnetosphere. The formula for the solar wind ram pressure is:
+        When the solar wind is exhibiting typical properties (displaying normal, non-extreme properties), the position of the Earth's magnetopause is determined by a delicate balance between the solar wind ram pressure and the magnetic pressure from the Earth's Magnetosphere. The formula for the solar wind ram pressure is:
         \begin{equation}
             P_{sw}=n_p*m_p*V^2
         \end{equation}
@@ -483,22 +483,22 @@
         \begin{equation}
             B=\frac{\mu_0m}{4\pi R^3}
         \end{equation}
-        where $\mu_0$ is the permeability of free space, $m$ is the magnetic dipole moment of the Earth and $R$ is the distance from the dipole. This formula also assumes, that the point of interest is on the plane of the equator. To calculate the solar wind ram pressure needed to push the magnetopause inside the geostationary orbit, the following values have been assumed for constants and variables at the point of balance between the solar wind ram pressure and the magnetic pressure ($P_{sw}=P{m}$): $m=8.22*10^{22}Am^{-2}$ and $R=R_{GEO}=42164km$.\\ \\
+        where $\mu_0$ is the permeability of free space, $m$ is the magnetic dipole moment of the Earth and $R$ is the distance from the dipole. This formula also assumes, that the point of interest is on the plane of the equator. To calculate the solar wind ram pressure needed to push the magnetopause inside the geostationary orbit, the following values have been assumed for constants and variables at the point of balance between the solar wind ram pressure and the magnetic pressure ($P_{sw}=P{m}$): $m=8.22*10^{22}\,Am^{-2}$ and $R=R_{GEO}=42164\,$km.\\ \\
         This means that the solar wind ram pressure required to push the magnetosphere inside the geostationary orbit is:
         \begin{equation}
-            P_{sw}=P_{m}=4.78nPa
+            P_{sw}=P_{m}=4.78\, nPa
         \end{equation}
         Based on this return level, the following return period for the magnetopause being pushed inside the geostationary orbit has been calculated:
         \begin{equation}
-            P=4.78nPa\rightarrow R=2.75*10^{-3}\ years\approx1\ day
+            P=4.78\, nPa\rightarrow R=2.75*10^{-3}\ years\approx1\ day
         \end{equation}
         If the magnetic field strength at the geostationary orbit is calculated using the magnetic field strength measured on the surface of Earth (on the equator), and use the proportionality between the magnetic field strength of a magnetic dipole and the distance from said dipole ($B\propto r^{-3}$), a new estimate for the solar wind ram pressure needed can be determined:
         \begin{equation}
-            P_{sw}=17.7nPa
+            P_{sw}=17.7\, nPa
         \end{equation}
         This increase in the pressure needed would mean, that the return period would increase as well:
         \begin{equation}
-            P=17.7nPa\rightarrow R=4.09*10^{-3}\ years\approx1.5\ day
+            P=17.7\, nPa\rightarrow R=4.09*10^{-3}\ years\approx1.5\ day
         \end{equation}
         These results of course do not consider the existence of a bow shock in front of the magnetopause, hence the solar wind ram pressure required to push the magnetopause inside the geostationary orbit is most likely reasonably higher than $P_{sw}=4.78nPa$ or $P_{sw}=17.7nPa$, which would result in a much longer return period.
 \section{Conclusion/Future Work}\label{sec:conclusions}
