@@ -19,7 +19,7 @@
 \end{center}
 \bigskip
 \begin{abstract}
-    \noindent This study estimates the return period of the 1859 Carrington Event and the 2003 Halloween Storms, while setting up relations, that can be used to estimate return periods of the strength of the Interplanetary Magnetic Field, solar wind speed and solar wind ram pressure based on the return level, and vice versa. The return period of the Carrington Event was estimated to be $R\approx 103\pm72\ years$, while the return period of the Halloween Storms was estimated to be $R=201\ years$. These results were achieved after analysing $\sim 20$ years of magnetic field and solar wind measurements, taken by the ACE satellite between the Earth and the Sun, at the Lagrange L1 point. To analyse the data, it was separated based on solar magnetic activity level and Generalised Extreme Value Distributions were fitted onto the daily maxima (minima) of the data. Finally, to set up relations between the return period and the return level, the parameters of these distributions have been estimated.
+    \noindent This study estimates the return period of the 1859 Carrington Event and the 2003 Halloween Storms, while setting up relations, that can be used to estimate return periods of the strength of the Interplanetary Magnetic Field, solar wind speed and solar wind ram pressure based on the return level, and vice versa. The return period of the Carrington Event was estimated to be between $R\approx 21\, years$ and $R=317\, years$, suggesting that the simulations and estimations resulting in the IMF strength and solar wind speed values may be underestimating the actual values. The return period of the Halloween Storms was estimated to be $R=201\ years$. These results were achieved after analysing $\sim 20$ years of magnetic field and solar wind measurements, taken by the ACE satellite between the Earth and the Sun, at the Lagrange L1 point. To analyse the data, it was separated based on solar magnetic activity level and Generalised Extreme Value Distributions were fitted onto the daily maxima (minima) of the data. Finally, to set up relations between the return period and the return level, the parameters of these distributions have been estimated.
 \end{abstract}
 \newpage
 \restoregeometry
@@ -265,35 +265,27 @@
                 \label{fig:SWEmaxXmin}
             \end{minipage}
         \end{figure}
-        After following the procedure described in Section \ref{sec:dataproc}, two graphs for each combination of the three solar activity levels (minimum, intermediate and maximum), coordinate (x, y and z) and daily minima or maxima has been produced: a graph of the cumulative distribution function and a graph of the probability density function. This section aims to describe the and point out the most important properties of these graphs, that are relevant to the topic of report. The effects on the return levels/return periods of the differences in the parameters describing comparable graphs is hard to predict from these graphs, and therefore these comparisons will mainly be discussed in Section \ref{sec:returnperiod}. It is important to note, that for graphs describing the strength of the Interplanetary Magnetic field or the solar wind speed, graphs of daily minima have been selected, as the more negative values represent stronger magnetic field strength or faster solar wind towards the Earth. For graphs describing the solar wind ram pressure, graphs of daily maxima have been selected, as the more positive values represent larger ram pressure.\\ \\
+        After following the procedure described in Section \ref{sec:dataproc}, two graphs for each combination of the three solar activity levels (minimum, intermediate and maximum), coordinate (x, y and z) and daily minima or maxima has been produced: a graph of the cumulative distribution function and a graph of the probability density function. This section aims to describe the and point out the most important properties of these graphs, that are relevant to the topic of report. The effects on the return levels/return periods of the differences in the parameters describing comparable graphs is hard to predict from these graphs, and therefore these comparisons will mainly be discussed in Section \ref{sec:gev}. The parameters of the distributions in this section and Section \ref{sec:returnperiod} can be found in Table \ref{tab:parameters}.\\
+        \begin{table}[t!]
+            \begin{center}
+                \begin{tabular}{|l|c|c|c|} \hline
+                    \textit{Distribution}&$\xi$&$\mu$&$\sigma$\\ \hline
+                    IMF Intermediate X Minima&0.095\pm 0.001&4.930\pm 0.001&2.095\pm 0.001\\ \hline
+                    IMF Maximum X Minima&0.066\pm 0.001&5.366\pm 0.001&2.358\pm0.002\\ \hline
+                    IMF Maximum Z Minima&0.192\pm 0.001&6.092\pm 0.001&2.593\pm 0.002\\ \hline
+                    SWS Minimum X Minima&0.159\pm 0.002&389.221\pm 0.057&78.528\pm 0.100\\ \hline
+                    SWS Intermediate X Minima&0.124\pm 0.003&423.375\pm 0.083&87.408\pm 0.148\\ \hline
+                    SWS Maximum X Minima&0.078\pm 0.001&423.107\pm0.042&90.772\pm 0.072\\ \hline
+                    P Intermediate Maxima&0.430\pm 0.001&20.402\pm0.005&11.560\pm 0.008\\ \hline
+                    P Maximum Maxima&0.399\pm 0.001&19.655\pm 0.003&12.840\pm 0.006\\ \hline
+                \end{tabular}
+                \caption{The parameters of the distributions described in Section \ref{sec:dailydist} and the equations describing the return periods and return levels in Section \ref{sec:returnperiod}. Using the equations in these sections and substituting the parameters, the distributions and relationship in these sections can be reconstructed. IMF refers to the Interplanetary Magnetic Field, SWS refers to the solar wind speed and P refers to the solar wind ram pressure. Minimum, Intermediate and Maximum refers to the solar activity level, while X or Z refers to the coordinates and Minima/Maxima refers to whether the distribution described daily minima or maxima. \label{tab:parameters}}
+            \end{center}
+        \end{table}\\
         The graphs on Figures \ref{fig:MFIintXmin} and \ref{fig:MFImaxXmin} describe the distributions of the daily minima of the IMF in the x-direction, during intermediate and maximum solar activity, respectively. The parameters acquired for these graphs (and the fact that they are somewhat similar) suggest that the IMF acts in similar ways during intermediate and maximum solar activity. The small differences between these parameters will mean some difference between the expected return level for a given return period (more in Section \ref{sec:returnperiod}). Studying these distributions is important, as the strength of the IMF in the x-direction often gives good indications of the strength of the solar wind heading towards Earth.\\ \\
-        The equation describing the cumulative distribution function on Figure \ref{fig:MFIintXmin} is the following:
-        \begin{equation}
-            G(z) = exp\Bigg [-\Bigg [1+0.095 \Bigg (\frac{-z-4.930}{2.095}\Bigg )\Bigg ]^{-1/0.095}\Bigg ]
-        \end{equation}\\
-        while the equation describing the cumulative distribution function on Figure \ref{fig:MFImaxXmin} is the following:
-        \begin{equation}
-            G(z) = exp\Bigg [-\Bigg [1+0.066 \Bigg (\frac{-z-5.366}{2.358}\Bigg )\Bigg ]^{-1/0.066}\Bigg ]
-        \end{equation}\\ \\
         The graphs on Figure \ref{fig:MFImaxZmin} describe the distribution of the daily minima of the IMF in the z-direction, during maximum solar activity. For the purposes of this study, daily maxima could have been selected as well, as the distribution of the magnetic field strength in the z-direction is fairly symmetric around $B_z=0\,$nT (see Figure \ref{fig:hist_imf}). The graph of daily minima has been selected, as this will give an easier way to predict the return period of a 'Carrington Event'-like geomagnetic storm (more in Section \ref{sec:carrington}).\\ \\
-        The equation describing the cumulative distribution function on Figure \ref{fig:MFImaxZmin} is the following:
-        \begin{equation}
-            G(z) = exp\Bigg [-\Bigg [1+0.192 \Bigg (\frac{-z-6.092}{2.593}\Bigg )\Bigg ]^{-1/0.192}\Bigg ]
-        \end{equation}\\ \\
         The graphs on Figures \ref{fig:SWEminXmin}, \ref{fig:SWEintXmin} and \ref{fig:SWEmaxXmin} describe the distributions of the daily minima of the solar wind speed in the x-direction, during minimum, intermediate and maximum solar activity, respectively. While the parameters on Figures \ref{fig:SWEintXmin} and \ref{fig:SWEmaxXmin} are similar mostly similar (except for the shape parameter, $\xi$), the parameters on Figure \ref{fig:SWEminXmin} are more different (smaller location parameter, $\mu$ and smaller scale parameter, $\sigma$), suggesting that the behaviour of the solar wind speed is similar during intermediate and maximum solar activity, while it's different during minimum solar activity. The smaller location parameter would suggest more extreme behaviour during minimum solar activity, while the smaller shape parameter would suggest less extreme behaviour in this period. The overall effects of these parameters will be shown in Section \ref{sec:returnperiod}.\\ \\
-        Figures \ref{fig:SWEminXmin} and \ref{fig:SWEintXmin} show a slight digression of the daily minima at around $-800\,$km/s. This is due to the presence of fast solar wind and its large difference of speed from the speed of slow solar wind. This disturbs the otherwise reasonable for of the Generalised Extreme Value Distribution, which would lead to inaccurate return levels and return periods.\\ \\
-        The equation describing the cumulative distribution function on Figure \ref{fig:SWEminXmin} is the following:
-        \begin{equation}
-            G(z) = exp\Bigg [-\Bigg [1+0.159 \Bigg (\frac{-z-389.221}{78.528}\Bigg )\Bigg ]^{-1/0.159}\Bigg ]
-        \end{equation}\\
-        while the equation describing the cumulative distribution function on Figure \ref{fig:SWEintXmin} is:
-        \begin{equation}
-            G(z) = exp\Bigg [-\Bigg [1+0.124 \Bigg (\frac{-z-423.375}{87.408}\Bigg )\Bigg ]^{-1/0.124}\Bigg ]
-        \end{equation}\\
-        and the equation describing the cumulative distribution function on Figure \ref{fig:SWEmaxXmin} is:
-        \begin{equation}\\
-            G(z) = exp\Bigg [-\Bigg [1+0.078 \Bigg (\frac{-z-423.107}{90.772}\Bigg )\Bigg ]^{-1/0.078}\Bigg ]
-        \end{equation}\\
+        Figures \ref{fig:SWEminXmin} and \ref{fig:SWEintXmin} show a slight digression of the daily minima at around $-800\,$km/s. This is due to the presence of fast solar wind and its large difference of speed from the speed of slow solar wind. This disturbs the otherwise reasonable for of the Generalised Extreme Value Distribution, which would lead to inaccurate return levels and return periods.\\
         \begin{figure}[t!]
             \begin{minipage}{0.48\textwidth}
                 \centering
@@ -309,15 +301,7 @@
                 \label{fig:Pmaxmax}
             \end{minipage}
         \end{figure}\\
-        The graphs on Figures \ref{fig:Pintmax} and \ref{fig:Pmaxmax} describe the distributions of the daily maxima of the solar wind ram pressure, during intermediate and maximum solar activity, respectively. There is a slight difference between the two graphs in all three parameters, therefore it is incredibly difficult to predict how their return levels for a given return period will relate, before seeing the return level against return period graphs (in Section \ref{sec:returnperiod}).\\ \\
-        The equation describing the cumulative distribution function on Figure \ref{fig:Pintmax} is the following:
-        \begin{equation}
-            G(z) = exp\Bigg [-\Bigg [1+0.430 \Bigg (\frac{z-20.402}{11.560}\Bigg )\Bigg ]^{-1/0.430}\Bigg ]
-        \end{equation}\\
-        while the equation describing the cumulative distribution function on Figure \ref{fig:Pmaxmax} is the following:
-        \begin{equation}
-            G(z) = exp\Bigg [-\Bigg [1+0.399 \Bigg (\frac{z-19.655}{12.840}\Bigg )\Bigg ]^{-1/0.399}\Bigg ]
-        \end{equation}
+        The graphs on Figures \ref{fig:Pintmax} and \ref{fig:Pmaxmax} describe the distributions of the daily maxima of the solar wind ram pressure, during intermediate and maximum solar activity, respectively. There is a slight difference between the two graphs in all three parameters, therefore it is incredibly difficult to predict how their return levels for a given return period will relate, before seeing the return level against return period graphs (in Section \ref{sec:returnperiod}).
     \subsection{Return Levels of Daily Minima and Maxima}\label{sec:returnperiod}
         \begin{figure}[t!]
             \begin{minipage}{0.48\textwidth}
@@ -382,31 +366,9 @@
             R=\frac{1/365}{1-exp\Bigg( -(1+\xi \frac{z_p-\mu}{\sigma})^{-\frac{1}{\xi}}\Bigg) }
         \end{equation}
         where the symbols used are described above.\\ \\
-        The graphs on Figures \ref{fig:MFIintXminReturn} and \ref{fig:MFImaxXminReturn} describe the relationship between the return levels and the return periods of the IMF in the x-direction, during intermediate and maximum solar activity, respectively. As shown on these graphs, an unexpected result appears, when the two graphs are compared: The behaviour of the IMF strength in the x-direction appears to be more extreme during intermediate solar activity, than during maximum solar activity. At first thought, this might be a surprising result, but upon further inspection, two points can be made to support these results: the solar wind speed is more extreme at lower solar activity (more on this later) and the strength of the IMF depends on the speed of the solar wind, due to Alfvén's Theorem\cite{1976alfven}.
-        The equation describing the relationship on Figure \ref{fig:MFIintXminReturn} is the following:
-        \begin{equation}
-            z_p =-4.930+\frac{2.095}{0.095}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.095}\Bigg)
-        \end{equation}
-        while the equation describing the relationship on Figure \ref{fig:MFImaxXminReturn} is the following:
-        \begin{equation}
-            z_p = -5.366+\frac{2.358}{0.066}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.066}\Bigg)
-        \end{equation}\\ \\
-        The graph on Figure \ref{fig:MFImaxZminReturn} describes the relationship between the return level and the return period of the IMF in the z-direction, during maximum solar activity. It is difficult to compare this graph to any of the other graphs in this section, since this is the only graph displaying properties in the z-direction. The equation describing the relationship on Figure \ref{fig:MFImaxZminReturn} is the following:
-        \begin{equation}
-            z_p = -6.092+\frac{2.593}{0.192}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.192}\Bigg)
-        \end{equation}\\ \\
-        The graphs on Figures \ref{fig:SWEminXminReturn}, \ref{fig:SWEintXminReturn} and \ref{fig:SWEmaxXminReturn} describe the relationship between the return levels and the return periods of the solar wind speed in the x-direction, during minimum, intermediate and maximum solar activity, respectively. The results of the comparison between these graphs has been expected, as the lower the solar activity, the more coronal holes can be found on the surface of the Sun and therefore, fast solar wind will be more abundant during lower solar activity. This means more extreme behaviour can be seen on Figure \ref{fig:SWEminXminReturn}, than on Figure \ref{fig:SWEintXminReturn} or \ref{fig:SWEmaxXminReturn}. The equation describing the relationship on Figure \ref{fig:SWEminXminReturn} is the following:
-        \begin{equation}
-            z_p = -389.221+\frac{78.528}{0.159}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.159}\Bigg)
-        \end{equation}
-        while the equation describing the relationship on Figure \ref{fig:SWEintXminReturn} is:
-        \begin{equation}
-            z_p = -423.375+\frac{87.408}{0.124}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.124}\Bigg)
-        \end{equation}
-        and the equation describing the relationship on Figure \ref{fig:SWEmaxXminReturn} is:
-        \begin{equation}
-            z_p = -423.107+\frac{90.772}{0.078}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.078}\Bigg)
-        \end{equation}
+        The graphs on Figures \ref{fig:MFIintXminReturn} and \ref{fig:MFImaxXminReturn} describe the relationship between the return levels and the return periods of the IMF in the x-direction, during intermediate and maximum solar activity, respectively. As shown on these graphs, an unexpected result appears, when the two graphs are compared: The behaviour of the IMF strength in the x-direction appears to be more extreme during intermediate solar activity, than during maximum solar activity. At first thought, this might be a surprising result, but upon further inspection, two points can be made to support these results: the solar wind speed is more extreme at lower solar activity (more on this later) and the strength of the IMF depends on the speed of the solar wind, due to Alfvén's Theorem\cite{1976alfven}.\\ \\
+        The graph on Figure \ref{fig:MFImaxZminReturn} describes the relationship between the return level and the return period of the IMF in the z-direction, during maximum solar activity. It is difficult to compare this graph to any of the other graphs in this section, since this is the only graph displaying properties in the z-direction.\\ \\
+        The graphs on Figures \ref{fig:SWEminXminReturn}, \ref{fig:SWEintXminReturn} and \ref{fig:SWEmaxXminReturn} describe the relationship between the return levels and the return periods of the solar wind speed in the x-direction, during minimum, intermediate and maximum solar activity, respectively. The results of the comparison between these graphs has been expected, as the lower the solar activity, the more coronal holes can be found on the surface of the Sun and therefore, fast solar wind will be more abundant during lower solar activity. This means more extreme behaviour can be seen on Figure \ref{fig:SWEminXminReturn}, than on Figure \ref{fig:SWEintXminReturn} or \ref{fig:SWEmaxXminReturn}.\\
         \begin{figure}[t!]
             \begin{minipage}{0.48\textwidth}
                 \centering
@@ -422,14 +384,7 @@
                 \label{fig:PmaxmaxReturn}
             \end{minipage}
         \end{figure}\\
-        The graphs on Figures \ref{fig:PintmaxReturn} and \ref{fig:PmaxmaxReturn} describe the relationship between the return levels and the return periods of the solar wind ram pressure, during intermediate and maximum solar activity, respectively. As the solar wind ram pressure is directly proportional to the square of the solar wind speed ($V^2$), it is expected, that the graph showing the behaviour of the solar wind ram pressure during intermediate solar activity will be more extreme. This is shown of these figures, as for a given return period, Figure \ref{fig:PintmaxReturn} gives a larger return level, than Figure \ref{fig:PmaxmaxReturn}. The equation describing the relationship on Figure \ref{fig:PintmaxReturn} is the following:
-        \begin{equation}
-            z_p =20.402-\frac{11.560}{0.430}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.430}\Bigg)
-        \end{equation}
-        while the equation describing the relationship on Figure \ref{fig:PmaxmaxReturn} is the following:
-        \begin{equation}
-            z_p = 19.655-\frac{12.840}{0.399}\Bigg( 1-\Bigg( -ln\Bigg( 1-\frac{1}{365*R}\Bigg) \Bigg) ^{-0.399}\Bigg)
-        \end{equation}\\ \\
+        The graphs on Figures \ref{fig:PintmaxReturn} and \ref{fig:PmaxmaxReturn} describe the relationship between the return levels and the return periods of the solar wind ram pressure, during intermediate and maximum solar activity, respectively. As the solar wind ram pressure is directly proportional to the square of the solar wind speed ($V^2$), it is expected, that the graph showing the behaviour of the solar wind ram pressure during intermediate solar activity will be more extreme. This is shown of these figures, as for a given return period, Figure \ref{fig:PintmaxReturn} gives a larger return level, than Figure \ref{fig:PmaxmaxReturn}.\\ \\
 \section{Discussion}\label{sec:discussion}
     \subsection{Reaction Time for Measurements at L1 Lagrange Point}
         When preparing to take action in case the satellite at the L1 point detects high speed solar wind or a strong magnetic field, it is important to know the response time available from the moment of detection. To estimate the response time available, the time taken for the solar wind to travel from the L1 point to the satellites or the surface of the Earth needs to be calculated. Since most of the satellites orbit the Earth at a height of a few thousand kilometres, the time it takes for the high speed solar wind to travel from the L1 point to the Earth and the time it takes for it to travel from the L1 point to most satellites orbiting Earth will be approximately the same.\\ \\
@@ -466,7 +421,7 @@
                 V_x\cite{2021blake}\approx -2000\, km/s\rightarrow R\approx 40\ years
             \end{split}
         \end{equation}
-        As these results show, approximation and simulations to determine the maximum solar wind speed and the maximum southward IMF strength during the Carrington Event are far from perfect. The biggest outlier of these results is the approximation of the southward IMF strength of $B_z=-118\,$nT, which gives a return period of $R=317\ years$, while the other approximations all give a return period below $R=50\ years$. These results would suggest, that the true return period of an event similar to the Carrington Event would be between $R=20\ years$ and $R=320\ years$. This range of return periods does not hold any value or progress, since 20 years appears to be too small, as nothing comparable to the Carrington Event has happened since the Carrington Event itself, on the other hand, 320 years is too large, since adequate notes about geomagnetic storms before the Carrington Event do not exist and not enough time has elapsed since the Carrington Event to prove or disprove the validity of it. Therefore, the only conclusion that can be drawn for these results regarding the return period of the Carrington event, is that $20\, years < R < 320\, years$.\\ \\
+        As these results show, approximation and simulations to determine the maximum solar wind speed and the maximum southward IMF strength during the Carrington Event are far from perfect. The biggest outlier of these results is the approximation of the southward IMF strength of $B_z=-118\,$nT, which gives a return period of $R=317\ years$, while the other approximations all give a return period below $R=50\ years$. These results would suggest, that the true return period of an event similar to the Carrington Event would be between $R=20\ years$ and $R=317\ years$. This range of return periods does not hold any value or progress, since 20 years appears to be too small, as nothing comparable to the Carrington Event has happened since the Carrington Event itself, on the other hand, 317 years is too large, since adequate notes about geomagnetic storms before the Carrington Event do not exist and not enough time has elapsed since the Carrington Event to prove or disprove the validity of it. Therefore, the only conclusion that can be drawn for these results regarding the return period of the Carrington event, is that $20\, years < R < 317\, years$.\\ \\
         As $B_z\approx -65\, nT$ gives a return period of $R\approx20\, years$, $V_x=-1850\, km/s$ gives a return period of $R=24\, years$ and $V_x\approx -2000\, km/s$ gives a return period of $R\approx 40\, years$, it is safe to say that these values are too low to reproduce the magnetic field strength and solar wind speed expected during the Carrington Event. Therefore these estimations in article\cite{2013cliver} and in article\cite{2021blake} are too low, except for the estimation $B_z=-118\, nT$.
     \subsection{Estimating the Return Period of a 'Halloween'-like Geomagnetic Storm}\label{sec:halloween}
         The 2003 Halloween Storms is one of the largest geomagnetic storms with precisely measured properties. Measurements of different maximum values during the Halloween Storms have all been taken from the data set used in this report. The largest (smallest) values from the 2 days the storm was raging have been used (28 October 2003 and 29 October 2003). It is important to note, that measurements of solar wind speed were not available on 29 October 2003, therefore the actual solar wind speed might be more extreme, which would result in a longer return period. It has been determined, that the following extreme values characterise the 2003 Halloween Storms: $B_x=-43.6\,$nT, $V_x=-804\,$km/s, $P=54.0\,$nPa. Based on these values, the following 3 return periods for an event similar to the Halloween Storms have been calculated:
